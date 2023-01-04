@@ -1,13 +1,14 @@
-# Makefile for Go-Hugo website
+#makefile for hugo
 
-# Build the website
+#build
 build:
-	@hugo
-# Clean up the build directory
-clean:
-	rm -rf dist/*
+    @hugo
 
-# Create a new blog post
+#clean
+clean:
+    rm -rf dist/*
+#post
 post:
 	hugo new posts/$(POST_NAME).md
 	sed -i 's/title: .*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
+	
