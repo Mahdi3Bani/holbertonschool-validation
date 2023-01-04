@@ -1,14 +1,12 @@
-#makefile for hugo
+## Makefile for Go-Hugo website
 
-build: ## build
-    go build -o ${BINARY_NAME} main.go
+build:## Build the website
+	@hugo
 
+clean: ## Clean up the build directory
+	rm -rf dist/*
 
-clean: ## clean
-    go clean
-    rm ${BINARY_NAME}
-
-post: ## post
+post: ## Create a new blog post
 	hugo new posts/$(POST_NAME).md
 	sed -i 's/title: .*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
 
