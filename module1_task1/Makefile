@@ -2,12 +2,11 @@
 
 #build
 build:
-    go build -o ${BINARY_NAME} main.go
+    @hugo
 
 #clean
 clean:
-    go clean
-    rm ${BINARY_NAME}
+    rm -rf dist/*
 #post
 post:
 	hugo new posts/$(POST_NAME).md
