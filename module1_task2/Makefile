@@ -13,4 +13,5 @@ post: ## post
 	sed -i 's/title: .*/title: "$(POST_TITLE)"/' content/posts/$(POST_NAME).md
 
 help: ## help
-    sed '/##/d' Makefile
+    @echo "Usage:"
+    cat Makefile | grep '##' | tr -d '##'
