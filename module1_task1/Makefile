@@ -2,11 +2,11 @@
 
 #build
 build:
-    @hugo
-
+	@hugo
 #clean
 clean:
-    rm -rf dist/*
+	rm -rf dist/*
+
 #post
 post:
 	hugo new posts/$(POST_NAME).md
