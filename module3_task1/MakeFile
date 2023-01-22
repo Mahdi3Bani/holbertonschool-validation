@@ -13,4 +13,3 @@ post: ## Create a new blog post
 help: ## usage: make help
 	@echo "Usage:"
 	cat Makefile | grep '##' | tr -d '##'
-Footer
